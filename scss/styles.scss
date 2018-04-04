@@ -1,0 +1,107 @@
+$zindex-dropdown:          1000 !default;
+$zindex-sticky:            1020 !default;
+$zindex-fixed:             1030 !default;
+$zindex-modal-backdrop:    1040 !default;
+$zindex-modal:             1050 !default;
+$zindex-popover:           1060 !default;
+$zindex-tooltip:           1070 !default;
+
+
+hr {
+    margin-top: -3.2rem;
+    margin-bottom: 0rem;
+    border: 0;
+    border-top: 1px solid black;
+}
+
+.header-nav {
+    // border: solid black 1px;
+}
+
+.carousel {
+    position: relative;
+    margin: 2em 0 -12em 0px;
+}
+
+.home-image-thumbnails {
+    width: 14em;
+    height: 18em;
+    object-fit: cover;
+}
+
+#header-title {
+    font-size: 1.4em;
+}
+
+#main-home-img {
+    height: 30em;
+}
+
+#shop-now-btn {
+    position: relative;
+    height: 2em;
+    top: -16em;
+    left: -17em;
+}
+
+#cookies-div {
+    border: solid black 1px;
+    /* display: inline; */
+    padding: .4em 1em;
+    position: relative;
+    top: -2em;
+    background-color: white;
+    /* right: -24.7em; */
+    text-align: center;
+}
+
+.home-img-text {
+    z-index: 100;
+    position: relative;
+    font-size: 48px;
+    line-height: 0.8em;
+    bottom: 9em;
+    left: 2em;
+    color: white;
+}
+
+#cookies-div-container {
+    margin: 4em 0 0 0;
+}
+
+#follow-me-grey-rectangle-overlay {
+    background-color: #F3F3F5;
+    height: 24em;
+    position: relative;
+    bottom: 51em;
+    z-index: -10;
+}
+
+#follow-me-text {
+    margin: 2em 0 0 0;
+    text-align: center;
+    font-size: 2em;
+}
+
+#follow-me-text-container {
+
+}
+
+#follow-me-container {
+    margin: 14em 0 0 0;
+}
+
+#footer-container {
+    border: solid #FBF1F7 2px;
+    background-color: #FBF1F7;
+    height: 22em;
+    margin: -20em 0 0 0;
+}
+#footer-container-options {
+    font-size: 0.8em;
+    padding: 5em 7em;
+}
+
+.social-media-icons {
+    -webkit-transform: scale(0.6);
+}
