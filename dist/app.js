@@ -18,7 +18,7 @@ function printHomePage() {
             </div>
         </div>
         <div class="home-img-text">
-            <p>100% NATURAL.</p>
+            <p class="styled-font">100% NATURAL.</p>
             <p>HOMEMADE</p>
             <p>FRESH COOKIES.</p>
         </div>

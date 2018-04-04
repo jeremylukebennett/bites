@@ -1,3 +1,6 @@
+body {
+  font-family: "Nunito", sans-serif; }
+
 a, a:hover, a:visited {
   color: black;
   text-decoration: none; }
@@ -8,6 +11,12 @@ hr {
   border: 0;
   border-top: 1px solid black; }
 
+.styled-font {
+  font-family: "PT Serif", serif; }
+
+#header-nav-id {
+  padding: 2.5em 0 0 0; }
+
 .carousel {
   position: relative;
   margin: 2em 0 -12em 0px; }
@@ -16,6 +25,14 @@ hr {
   width: 14em;
   height: 18em;
   object-fit: cover; }
+
+.shop-image-thumbnails {
+  width: 18em;
+  height: 18em;
+  object-fit: cover;
+  margin: -3px 1em;
+  -webkit-transform: scale(0.8);
+  padding: 0 0em; }
 
 #header-title {
   font-size: 1.4em; }
@@ -36,7 +53,6 @@ hr {
   position: relative;
   top: -2em;
   background-color: white;
-  /* right: -24.7em; */
   text-align: center; }
 
 .home-img-text {
@@ -78,5 +94,28 @@ hr {
 
 .social-media-icons {
   -webkit-transform: scale(0.6); }
+
+#shop-content-container {
+  background-color: #F3F3F5;
+  margin: 0 0 2em 0; }
+
+#shop-header-text {
+  padding: 3em 0 0 0;
+  margin: 4em 0 0 0; }
+
+.foo img:last-child {
+  display: none; }
+
+.foo:hover img:first-child {
+  display: none; }
+
+.foo:hover img:last-child {
+  display: inline-block; }
+
+.cookie-wrapper-div {
+  justify-content: center; }
+
+.cookie-name {
+  margin: 0 0 0 0; }
 
 /*# sourceMappingURL=main.css.map */

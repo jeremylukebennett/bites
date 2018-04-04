@@ -1,3 +1,7 @@
+
+$basic-font: 'Nunito', sans-serif;
+$styled-font: 'PT Serif', serif; 
+
 $zindex-dropdown:          1000 !default;
 $zindex-sticky:            1020 !default;
 $zindex-fixed:             1030 !default;
@@ -5,6 +9,11 @@ $zindex-modal-backdrop:    1040 !default;
 $zindex-modal:             1050 !default;
 $zindex-popover:           1060 !default;
 $zindex-tooltip:           1070 !default;
+
+
+body {
+    font-family: $basic-font;
+}
 
 a, a:hover, a:visited {
     color: black;
@@ -18,8 +27,12 @@ hr {
     border-top: 1px solid black;
 }
 
-.header-nav {
-    // border: solid black 1px;
+.styled-font {
+    font-family: $styled-font;
+}
+
+#header-nav-id {
+    padding: 2.5em 0 0 0;
 }
 
 .carousel {
@@ -31,6 +44,15 @@ hr {
     width: 14em;
     height: 18em;
     object-fit: cover;
+}
+
+.shop-image-thumbnails {    
+    width: 18em;
+    height: 18em;
+    object-fit: cover;
+    margin: -3px 1em;
+    -webkit-transform: scale(0.8);
+    padding: 0 0em;
 }
 
 #header-title {
@@ -55,7 +77,6 @@ hr {
     position: relative;
     top: -2em;
     background-color: white;
-    /* right: -24.7em; */
     text-align: center;
 }
 
@@ -92,6 +113,7 @@ hr {
 }
 
 #follow-me-container {
+    // margin: 14em 0 0em 0;
     margin: 14em 0 -20em 0;
 }
 
@@ -108,4 +130,31 @@ hr {
 
 .social-media-icons {
     -webkit-transform: scale(0.6);
+}
+
+#shop-content-container {
+    background-color: #F3F3F5;
+    margin: 0 0 2em 0;
+    // height: 46em;
+}
+
+#shop-header-text {
+    padding: 3em 0 0 0;
+    margin: 4em 0 0 0;
+}
+
+.foo img:last-child{display:none}
+.foo:hover img:first-child{display:none}
+.foo:hover img:last-child{display:inline-block}
+
+.cookie-containers {
+    // width: 0em;
+}
+
+.cookie-wrapper-div {
+    justify-content: center;
+}
+
+.cookie-name {
+    margin: 0 0 0 0;
 }
