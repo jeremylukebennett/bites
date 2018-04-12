@@ -1,3 +1,7 @@
+
+$basic-font: 'Nunito', sans-serif;
+$styled-font: 'PT Serif', serif; 
+
 $zindex-dropdown:          1000 !default;
 $zindex-sticky:            1020 !default;
 $zindex-fixed:             1030 !default;
@@ -7,6 +11,15 @@ $zindex-popover:           1060 !default;
 $zindex-tooltip:           1070 !default;
 
 
+body {
+    font-family: $basic-font;
+}
+
+a, a:hover, a:visited {
+    color: black;
+text-decoration: none;
+}
+
 hr {
     margin-top: -3.2rem;
     margin-bottom: 0rem;
@@ -14,8 +27,12 @@ hr {
     border-top: 1px solid black;
 }
 
-.header-nav {
-    // border: solid black 1px;
+.styled-font {
+    font-family: $styled-font;
+}
+
+#header-nav-id {
+    padding: 2.5em 0 0 0;
 }
 
 .carousel {
@@ -27,6 +44,15 @@ hr {
     width: 14em;
     height: 18em;
     object-fit: cover;
+}
+
+.shop-image-thumbnails {    
+    width: 18em;
+    height: 18em;
+    object-fit: cover;
+    margin: -3px 1em;
+    -webkit-transform: scale(0.8);
+    padding: 0 0em;
 }
 
 #header-title {
@@ -51,7 +77,6 @@ hr {
     position: relative;
     top: -2em;
     background-color: white;
-    /* right: -24.7em; */
     text-align: center;
 }
 
@@ -88,14 +113,15 @@ hr {
 }
 
 #follow-me-container {
-    margin: 14em 0 0 0;
+    // margin: 14em 0 0em 0;
+    margin: 14em 0 -20em 0;
 }
 
 #footer-container {
     border: solid #FBF1F7 2px;
     background-color: #FBF1F7;
     height: 22em;
-    margin: -20em 0 0 0;
+    margin: 0em 0 0 0;
 }
 #footer-container-options {
     font-size: 0.8em;
@@ -104,4 +130,39 @@ hr {
 
 .social-media-icons {
     -webkit-transform: scale(0.6);
+}
+
+#shop-nav-bar {
+    background-color: #F3F3F5;
+    margin: 0 0 2em 0;
+}
+
+#item-content-container {
+    background-color: #F3F3F5;
+    // margin: 0 0 2em 0;
+}
+
+#shop-header-text {
+    padding: 3em 0 0 0;
+    margin: 4em 0 0 0;
+}
+
+.foo img:last-child{display:none}
+.foo:hover img:first-child{display:none}
+.foo:hover img:last-child{display:inline-block}
+
+.cookie-containers {
+    // width: 0em;
+}
+
+.cookie-wrapper-div {
+    justify-content: center;
+}
+
+.cookie-name {
+    margin: 0 0 0 0;
+}
+
+#end-div {
+    text-align: end;
 }

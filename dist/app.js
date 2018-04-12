@@ -1,19 +1,319 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 "use strict";
 
+function printHomePage() {
+    let mainContent = document.getElementById("page-content");
+
+    mainContent.innerHTML = `
+    <div id="carouselExampleSlidesOnly" class="carousel slide row" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+            <img class="d-block w-100 col my-4" src="images/main-home-img.jpg" alt="First slide">
+            </div>
+            <div class="carousel-item">
+            <img class="d-block w-100 col my-4" src="images/main-home-img-2.jpg" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+            <img class="d-block w-100 col my-4" src="images/main-home-img-3.jpg" alt="Third slide">
+            </div>
+        </div>
+        <div class="home-img-text">
+            <p class="styled-font">100% NATURAL.</p>
+            <p>HOMEMADE</p>
+            <p>FRESH COOKIES.</p>
+        </div>
+        <button id="shop-now-btn">SHOP NOW</button>
+    </div>
+
+    <h3 class="text-center my-5">/ BEST SELLERS</h3>
+    <p class="text-center">I am a paragraph. Click here to add your text and edit me.</p>
+
+    <div class="row">
+        <img src="images/white_choc.png" class="col my-4 home-image-thumbnails">
+        <img src="images/oatmeal_bites.png" class="col my-4 home-image-thumbnails">
+        <img src="images/jam_poppy.png" class="col my-4 home-image-thumbnails">
+    </div>
+
+    <div class="row">
+        <p class="col text-center">WHITE CHOCOLATE BITES</p>
+        <p class="col text-center">OATMEAL BITES</p>
+        <p class="col text-center">JAM & POPPY SEED BITES</p>
+    </div>
+
+    <div class="row">
+        <p class="col text-center">$1.00</p>
+        <p class="col text-center">$2.00</p>
+        <p class="col text-center">$1.00</p>
+    </div>
+
+    <div id="cookies-div-container" class="row">
+        <span id="cookies-div" class="mx-auto">ALL COOKIES</span>
+    </div>
+    <hr>
+
+    <!-- This should contain images -->
+    <div id="follow-me-container">
+    <div class="row "id="follow-me-imgs-row-1">
+            <img src="images/bowls.jpg" class="col my-4 home-image-thumbnails">
+            <img src="images/spoon.jpg" class="col my-4 home-image-thumbnails">
+            <img src="images/oranges.jpg" class="col my-4 home-image-thumbnails">
+    </div>
+
+    <div class="row "id="follow-me-imgs-row-2">
+            <img src="images/choc_cookies.jpg" class="col my-4 home-image-thumbnails">
+            <img src="images/ingredients.jpg" class="col my-4 home-image-thumbnails">
+            <img src="images/crackers.jpg" class="col my-4 home-image-thumbnails">
+    </div>
+        <div id="follow-me-text-container" class="row">
+            <div class="col" id="follow-me-grey-rectangle-overlay">
+                <p id="follow-me-text">/ FOLLOW ME FOR MORE BITES</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+`;
+}
+
+
+
+module.exports = {printHomePage};
+},{}],2:[function(require,module,exports){
+"use strict";
+
 let $ = require("jquery");
+let home = require("./home-page");
+let shop = require("./shop-page");
 
-// $("#slideshow > div:gt(0)").hide();
 
-// setInterval(function() { 
-//   $('#slideshow > div:first')
-//     .fadeOut(1000)
-//     .next()
-//     .fadeIn(1000)
-//     .end()
-//     .appendTo('#slideshow');
-// },  3000);
-},{"jquery":2}],2:[function(require,module,exports){
+let homeLink = document.getElementById("load-home");
+
+
+// Load Home Page
+homeLink.addEventListener("click", function(){
+    home.printHomePage();
+});
+
+
+
+
+
+
+let shopLink = document.getElementById("load-shop");
+
+
+// Load Home Page
+shopLink.addEventListener("click", function(){
+    shop.printShopPage();
+});
+
+
+// printShopPage
+},{"./home-page":1,"./shop-page":4,"jquery":5}],3:[function(require,module,exports){
+"use strict";
+
+let $ = require("jquery");
+require("./interaction");
+let home = require("./home-page");
+
+
+
+// Loads Home Page content
+// home.printHomePage();
+
+
+
+},{"./home-page":1,"./interaction":2,"jquery":5}],4:[function(require,module,exports){
+"use strict";
+
+function printShopPage() {
+    let mainContent = document.getElementById("page-content");
+
+    mainContent.innerHTML = `<div id="shop-content-container" class="mx-auto">
+    <div id="shop-header-text">
+        <h2 class="text-center">PICK YOUR COOKIES</h2>
+
+
+
+
+
+
+
+        <div class="row cookie-wrapper-div">
+                <div class="text-center p-0">
+
+                <a class="foo" href="#">
+                    <img src="images/jam_poppy.png" class="mx-auto shop-image-thumbnails"/>
+                    <img src="images/jam_poppy-qv.png" class="mx-auto shop-image-thumbnails"/>
+                </a>
+                <p class="cookie-name">Jam & Poppy Seed Bites</p>
+                <p class="styled-font">$1.00</p>
+                </div>
+
+
+                <div class="text-center p-0">
+                <a class="foo" href="#">
+                    <img src="images/poppy_seeds.png" class="mx-auto shop-image-thumbnails"/>
+                    <img src="images/poppy_seeds-qv.png" class="mx-auto shop-image-thumbnails"/>
+                </a>
+                     <p class="cookie-name">Jam & Poppy Seed Bites</p>
+                <p class="styled-font">$1.00</p>
+                </div>
+
+
+                <div class="text-center p-0">
+                    <a class="foo" href="#">
+                        <img src="images/oatmeal_bites.png" class="mx-auto shop-image-thumbnails"/>
+                        <img src="images/oatmeal_bites-qv.png" class="mx-auto shop-image-thumbnails"/>
+                    </a>
+                          <p class="cookie-name">Jam & Poppy Seed Bites</p>
+                <p class="styled-font">$1.00</p>
+                </div>
+
+        </div>
+
+
+
+
+
+
+        <div class="row cookie-wrapper-div">
+
+        <div class="text-center p-0">
+            <a class="foo" href="#">
+                <img src="images/soft_butter.png" class="mx-auto shop-image-thumbnails"/>
+                <img src="images/soft_butter-qv.png" class="mx-auto shop-image-thumbnails"/>
+            </a>
+                <p class="cookie-name">Jam & Poppy Seed Bites</p>
+                <p class="styled-font">$1.00</p>
+        </div>
+
+        <div class="text-center p-0">
+
+            <a class="foo" href="#">
+                <img src="images/parm.png" class="mx-auto shop-image-thumbnails"/>
+                <img src="images/parm-qv.png" class="mx-auto shop-image-thumbnails"/>
+            </a>
+                <p class="cookie-name">Jam & Poppy Seed Bites</p>
+                <p class="styled-font">$1.00</p>
+
+        </div>
+
+
+
+        <div class="text-center p-0">
+
+            <a class="foo" href="#">
+                <img src="images/white_choc.png" class="mx-auto shop-image-thumbnails"/>
+                <img src="images/white_choc-qv.png" class="mx-auto shop-image-thumbnails"/>
+            </a>
+                <p class="cookie-name">Jam & Poppy Seed Bites</p>
+                <p class="styled-font">$1.00</p>
+
+        </div>
+
+    </div>
+
+
+
+
+    <div class="row cookie-wrapper-div">
+            <div class="text-center p-0">
+
+                <a class="foo" href="#">
+                    <img src="images/jam_bites.png" class="mx-auto shop-image-thumbnails"/>
+                    <img src="images/jam_bites-qv.png" class="mx-auto shop-image-thumbnails"/>
+                </a>
+                     <p class="cookie-name">Jam & Poppy Seed Bites</p>
+                <p class="styled-font">$1.00</p>
+
+            </div>
+
+
+            <div class="text-center p-0">
+
+                <a class="foo" href="#">
+                    <img src="images/choc_chips.png" class="mx-auto shop-image-thumbnails"/>
+                    <img src="images/choc_chips-qv.png" class="mx-auto shop-image-thumbnails"/>
+                </a>
+                     <p class="cookie-name">Jam & Poppy Seed Bites</p>
+                <p class="styled-font">$1.00</p>
+
+            </div>
+
+            <div class="text-center p-0">
+
+                <a class="foo" href="#">
+                    <img src="images/nuts_caramel.png" class="mx-auto shop-image-thumbnails"/>
+                    <img src="images/nuts_caramel-qv.png" class="mx-auto shop-image-thumbnails"/>
+                </a>
+                     <p class="cookie-name">Jam & Poppy Seed Bites</p>
+                <p class="styled-font">$1.00</p>
+
+            </div>
+
+        </div>
+
+
+
+
+
+        <div class="row cookie-wrapper-div">
+
+
+
+            <div class="text-center p-0">
+
+                <a class="foo" href="#">
+                    <img src="images/butter.png" class="mx-auto shop-image-thumbnails"/>
+                    <img src="images/butter-qv.png" class="mx-auto shop-image-thumbnails"/>
+                </a>
+                     <p class="cookie-name">Jam & Poppy Seed Bites</p>
+                <p class="styled-font">$1.00</p>
+
+            </div>
+
+
+            <div class="text-center p-0">
+
+                <a class="foo" href="#">
+                    <img src="images/pecan_nuts.jpg" class="mx-auto shop-image-thumbnails"/>
+                    <img src="images/pecan_nuts-qv.jpg" class="mx-auto shop-image-thumbnails"/>
+                </a>
+                     <p class="cookie-name">Jam & Poppy Seed Bites</p>
+                <p class="styled-font">$1.00</p>
+
+
+
+            </div>
+
+
+            <div class="text-center p-0">
+
+                <a class="foo" href="#">
+                    <img src="images/seeds.jpg" class="mx-auto shop-image-thumbnails"/>
+                    <img src="images/seeds-qv.jpg" class="mx-auto shop-image-thumbnails"/>
+                </a>
+                     <p class="cookie-name">Jam & Poppy Seed Bites</p>
+                <p class="styled-font">$1.00</p>
+
+            </div>
+
+        </div>
+
+    
+    
+
+
+    </div>
+</div>
+
+
+</div>`;
+}
+
+module.exports = {printShopPage};
+},{}],5:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v3.3.1
  * https://jquery.com/
@@ -10379,4 +10679,4 @@ if ( !noGlobal ) {
 return jQuery;
 } );
 
-},{}]},{},[1]);
+},{}]},{},[3]);
