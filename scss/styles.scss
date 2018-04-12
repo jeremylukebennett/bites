@@ -132,10 +132,14 @@ hr {
     -webkit-transform: scale(0.6);
 }
 
-#shop-content-container {
+#shop-nav-bar {
     background-color: #F3F3F5;
     margin: 0 0 2em 0;
-    // height: 46em;
+}
+
+#item-content-container {
+    background-color: #F3F3F5;
+    // margin: 0 0 2em 0;
 }
 
 #shop-header-text {
@@ -157,4 +161,8 @@ hr {
 
 .cookie-name {
     margin: 0 0 0 0;
+}
+
+#end-div {
+    text-align: end;
 }
